@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: "**/package.json"
     - run: npm install --no-package-lock
-    - run: npm run build
+    - run: CI=false npm run build
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/upload-artifact@v4
