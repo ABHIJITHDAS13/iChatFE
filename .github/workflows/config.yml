@@ -33,5 +33,5 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v4
       with:
-        name: build-files-${{ matrix.node-version }}
-        path: build/
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
